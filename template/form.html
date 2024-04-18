@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Information Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        margin-top: 0;
+        color: #333;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="url"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="checkbox"] {
+        margin-top: 5px;
+    }
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Company Information Form</h2>
+    <form id="companyForm" method="POST">
+        <!-- Company Information -->
+        {% csrf_token %}
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="company_name">
+
+        <label for="company_phone">Company Phone:</label>
+        <input type="text" id="company_phone" name="company_phone">
+
+        <label for="company_email">Company Email:</label>
+        <input type="email" id="company_email" name="company_email">
+
+        <label for="industry">Industry:</label>
+        <input type="text" id="industry" name="industry">
+
+        <label for="company_gst">Company GST:</label>
+        <input type="text" id="company_gst" name="company_gst">
+
+        <label for="company_pancard">Company PAN Card:</label>
+        <input type="text" id="company_pancard" name="company_pancard">
+
+        <label for="company_website">Company Website:</label>
+        <input type="url" id="company_website" name="company_website">
+
+        <!-- Company Address -->
+        <h3>Company Address</h3>
+        <label for="address_line1">Address Line 1:</label>
+        <input type="text" id="address_line1" name="address_line1">
+
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street">
+
+        <label for="area_building">Area/Building:</label>
+        <input type="text" id="area_building" name="area_building">
+
+        <label for="landmark">Landmark:</label>
+        <input type="text" id="landmark" name="landmark">
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state">
+
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode">
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country">
+
+        <!-- Parent Company Information -->
+        <h3>Parent Company Information</h3>
+        <label for="par_company_name">Parent Company Name:</label>
+        <input type="text" id="par_company_name" name="par_company_name">
+
+        <label for="par_industry">Industry:</label>
+        <input type="text" id="par_industry" name="par_industry">
+
+        <label for="par_company_gst">Parent Company GST:</label>
+        <input type="text" id="par_company_gst" name="par_company_gst">
+
+        <label for="par_company_pancard">Parent Company PAN Card:</label>
+        <input type="text" id="par_company_pancard" name="par_company_pancard">
+
+        <label for="par_company_phone">Parent Company Phone:</label>
+        <input type="text" id="par_company_phone" name="par_company_phone">
+
+        <label for="par_company_email">Parent Company Email:</label>
+        <input type="email" id="par_company_email" name="par_company_email">
+
+        <label for="par_company_website">Parent Company Website:</label>
+        <input type="url" id="par_company_website" name="par_company_website">
+
+        <!-- Parent Company Address -->
+        <h3>Parent Company Address</h3>
+        <label for="par_address_line1">Address Line 1:</label>
+        <input type="text" id="par_address_line1" name="par_address_line1">
+
+        <label for="par_street">Street:</label>
+        <input type="text" id="par_street" name="par_street">
+
+        <label for="par_area_building">Area/Building:</label>
+        <input type="text" id="par_area_building" name="par_area_building">
+
+        <label for="par_landmark">Landmark:</label>
+        <input type="text" id="par_landmark" name="par_landmark">
+
+        <label for="par_city">City:</label>
+        <input type="text" id="par_city" name="par_city">
+
+        <label for="par_state">State:</label>
+        <input type="text" id="par_state" name="par_state">
+
+        <label for="par_pincode">Pincode:</label>
+        <input type="text" id="par_pincode" name="par_pincode">
+
+        <!-- Other Fields -->
+        <label for="mark_parent">Mark as Parent:</label>
+        <input type="checkbox" id="mark_parent" name="mark_parent" value="1">
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
